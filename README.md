@@ -1,3 +1,3 @@
+# mcp-web-rag-search
 
-
-# implement-JWT-in-python
+Model Context Protocol (MCP) powered Web Search + Retrieval Augmented Generation system that scrapes web results and uses vector similarity search to generate accurate AI answers.
