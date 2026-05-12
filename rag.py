@@ -109,5 +109,38 @@ async def generate_answer(query: str, vectorstore: FAISS) -> str:
 
 
 
+# async def main():
+#     # Test search + RAG + generation
+#     query = "How many battles were won by maharan amar singh of mewar"
+
+#     print("1. Searching the web...")
+#     formatted_results, raw_results = await websearch.search_web(query)
+#     print(formatted_results)
+
+#     if not raw_results:
+#         print("No results found.")
+#         return
+
+#     # Extract URLs
+#     urls = [result.get("url") for result in raw_results if result.get("url")]
+#     print(f"\n2. Creating RAG from {len(urls)} URLs...")
+#     vectorstore = await create_rag(urls)
+
+#     # Test retrieval
+#     print("\n3. Retrieving relevant chunks...")
+#     docs = await search_rag(query, vectorstore)
+#     for i, doc in enumerate(docs, 1):
+#         print(f"\n--- Chunk {i} (source: {doc.metadata.get('source', 'unknown')}) ---")
+#         print(doc.page_content[:300] + "...")
+
+#     # Test generation
+#     print("\n4. Generating answer...")
+#     answer = await generate_answer(query, vectorstore)
+#     print(f"\nAnswer:\n{answer}")
+
+
+
+
+
 # if __name__ == "__main__":
 #     asyncio.run(main())
